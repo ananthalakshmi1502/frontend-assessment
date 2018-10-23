@@ -1,0 +1,28 @@
+<div class="dialog">
+<h1 mat-dialog-title>Add New Contact</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <input matInput placeholder="First Name*" [(ngModel)]="data.title">
+  </mat-form-field>&nbsp;&nbsp;
+  <mat-form-field>
+    <input matInput placeholder="Last Name*" [(ngModel)]="data.last_name">
+  </mat-form-field>
+  <div>
+      <label>Gender*: </label>
+      <mat-radio-group [(ngModel)]="data.gender" >
+        <mat-radio-button value="Male"> Male </mat-radio-button>&nbsp;&nbsp;
+        <mat-radio-button value="Female"> Female </mat-radio-button>
+      </mat-radio-group>
+    </div>
+  <mat-form-field>
+    <input matInput placeholder="Email*" [(ngModel)]="data.email">
+  </mat-form-field>&nbsp;&nbsp;
+  <mat-form-field>
+    <input matInput placeholder="Mobile*" [(ngModel)]="data.mobile">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">CANCEL</button>
+  <button mat-button (click)="saveData(data)" [mat-dialog-close]="data" cdkFocusInitial>SAVE</button>
+</div>
+</div>

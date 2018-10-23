@@ -1,0 +1,80 @@
+
+.grid-container {
+  margin: 20px;
+}
+
+.dashboard-card {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  background: oldlace;
+  -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: linear-gradient(90deg, rgb(255, 231, 220) 0%, rgb(142, 245, 179) 100%);
+}
+.action-icons
+{
+  display:flex;
+  flex-direction:column;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: deeppink;
+}
+
+.search {
+     width: 30%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url("/assets/searchicon.png");
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+.search:focus {
+    width: 90%;
+}
+
+.user{
+ 
+}
+
+.profile-pic
+{
+  border-radius: 50%;
+  width:100px;
+}
+.user-Detail
+{
+  display: grid;
+  grid-template-rows:repeat(2,1fr);
+}
+.mat-card-header {
+    display: flex;
+    flex-direction: column !important;
+}
+
+.card-content
+{
+   display: grid;
+   grid-template-columns:0%;
+}
+
+.more-button {
+  
+}
+
+.dashboard-card-content {
+  text-align: center;
+  font-size: 16px;
+  margin-top: -100px;
+}

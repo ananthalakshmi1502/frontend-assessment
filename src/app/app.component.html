@@ -1,5 +1,13 @@
 <div style="text-align:center">
   <h1>
-    Welcome to {{ title }}!
+    Welcome to my contacts dashboard!
   </h1>
+
+  <div id="container">
+	  <div id="content">
+	    <router-outlet></router-outlet>
+	  </div>
+ 	</div>
+ 	  <button class="custom-button" (click)="openAddDialog()" matTooltip="Add New Contact" mat-fab color=""><mat-icon>add</mat-icon></button>
+
 </div>

@@ -1,0 +1,35 @@
+<div class="grid-container">
+  <div>
+    <input class="search" [(ngModel)]="searchText" placeholder="Search">
+  </div>
+  <mat-grid-list cols="1" rowHeight="{{rowHeight}}" (window:resize)="onResize($event)">
+    <mat-grid-tile *ngFor="let card of cards | filter : searchText" [colspan]="1" [rowspan]="1">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title >
+            <div class="card-content">
+            <div><img class="profile-pic" src="{{card.pic}}" alt="Avatar"></div>
+            
+            <div class="action-icons">
+              <button mat-icon-button aria-label="Toggle menu" (click)="editContact(card)" matTooltip="Edit Contact">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button aria-label="Toggle menu" (click)="removeContact(card)" matTooltip="Delete Contact">
+              <mat-icon>close</mat-icon>
+            </button>
+            </div>
+          </div>
+            
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <div class="user">
+            <span><b>{{card.title}} {{card.last_name}}</b></span><br>
+            <span>{{card.email}}</span><br>
+            <span>Mobile: {{card.mobile}}</span>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
